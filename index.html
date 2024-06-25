@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularz kontaktowy</title>
+    <script src="script.js"></script>
+    <style>
+      .hidden {
+        display: none;
+      }
+      .error {
+        color: red;
+        font-size: 0.9em;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      body {
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      form {
+        max-width: 400px;
+        width: 85%;
+        margin: auto;
+      }
+      label {
+        display: block;
+        margin: 10px 0 5px;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      #summary {
+        max-width: 400px;
+        width: 100%;
+      }
+      #summary p {
+        margin: 10px 0;
+      }
+      button {
+        width: 100%;
+        padding: 12px 15px;
+        margin-top: 10px;
+        border: none;
+        background: rgb(107, 185, 174);
+        color: white;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Formularz kontaktowy</h1>
+    <form id="contactForm">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+      <div id="emailError" class="error hidden">
+        Podaj prawidłowy adres email
+      </div>
+      <label for="subject">Temat:</label>
+      <select id="subject" name="subject" required>
+        <option value="">Wybierz temat</option>
+        <option value="support">Wsparcie</option>
+        <option value="sales">Sprzedaż</option>
+        <option value="feedback">Opinie</option>
+      </select>
+      <div id="subjectError" class="error hidden">Wybierz temat</div>
+
+      <label for="message">Treść: </label>
+      <textarea id="message" name="message" required></textarea>
+      <div id="messageError" class="error hidden">
+        Treść nie może być pusta.
+      </div>
+      <button type="submit">Wyślij</button>
+    </form>
+
+    <div id="summary" class="hidden">
+      <h2>Podsumowanie</h2>
+      <p>Email: <span id="summaryEmail"></span></p>
+      <p>Temat: <span id="summarySubject"></span></p>
+      <p>Treść: <span id="summaryMessage"></span></p>
+      <button id="editButton">Edytuj</button>
+      <button id="confirmButton">Potwierdź</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

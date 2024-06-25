@@ -1,0 +1,11 @@
+# Formularz Kontaktowy
+
+Ten projekt to prosty formularz kontaktowy stworzony przy użyciu HTML, CSS i JavaScript. Formularz umożliwia użytkownikowi wprowadzenie adresu email, wybranie tematu z listy oraz wprowadzenie treści wiadomości. Po wypełnieniu formularza i kliknięciu przycisku "Wyślij", wyświetlane jest podsumowanie wprowadzonych danych na tej samej stronie z możliwością edycji przed ostatecznym zatwierdzeniem.
+
+## Funkcjonalności
+
+- Walidacja formularza: Sprawdzanie poprawności wprowadzonych danych (adres email, temat, treść wiadomości).
+- Podsumowanie danych: Po wysłaniu formularza wyświetlane jest podsumowanie wprowadzonych danych.
+- Edycja danych: Możliwość edycji wprowadzonych danych przed ostatecznym zatwierdzeniem.
+- Responsywny design: Formularz dostosowuje się do szerokości ekranu dzięki stylom CSS.
+
